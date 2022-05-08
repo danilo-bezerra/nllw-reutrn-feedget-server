@@ -9,6 +9,11 @@ export const routes = express.Router();
 
 routes.post("/feedbacks", async (req, res) => {
   const {type, comment, screenshot} = req.body
+   console.log("============================")
+  console.log(req.body)
+   console.log("============================")
+  console.log(type, comment, screenshot)
+  console.log("============================")
 
   const prismaFeedbackRepository = new PrimaFeedbacksRepository()
   const nodemailerAdapter = new NodemailerAdapter()
